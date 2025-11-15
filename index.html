@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>守护生命 - 动物保护行动</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,11 +14,11 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #1565C0;
+            --secondary: #1976D2;
+            --accent: #42A5F5;
+            --light: #E3F2FD;
+            --dark: #0D47A1;
             --text: #333333;
             --white: #ffffff;
         }
@@ -101,7 +101,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1564349689-f69320c99da5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -252,17 +252,17 @@
             color: var(--text);
         }
 
-        .initiatives {
+        .endangered {
             background-color: var(--white);
         }
 
-        .initiatives-grid {
+        .endangered-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .initiative-card {
+        .animal-card {
             background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
@@ -270,38 +270,69 @@
             transition: transform 0.3s ease;
         }
 
-        .initiative-card:hover {
+        .animal-card:hover {
             transform: translateY(-10px);
         }
 
-        .initiative-img {
+        .animal-img {
             height: 200px;
             overflow: hidden;
         }
 
-        .initiative-img img {
+        .animal-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .initiative-card:hover .initiative-img img {
+        .animal-card:hover .animal-img img {
             transform: scale(1.1);
         }
 
-        .initiative-content {
+        .animal-content {
             padding: 1.5rem;
         }
 
-        .initiative-content h3 {
+        .animal-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
-        .initiative-content p {
+        .animal-content p {
             margin-bottom: 1.5rem;
+        }
+
+        .conservation-steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-icon {
+            background-color: var(--primary);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
         }
 
         .cta {
@@ -427,8 +458,12 @@
                 grid-template-columns: 1fr;
             }
             
-            .initiatives-grid {
+            .endangered-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .conservation-steps {
+                grid-template-columns: 1fr;
             }
             
             .footer-content {
@@ -475,7 +510,7 @@
                 display: block;
             }
             
-            .initiatives-grid {
+            .endangered-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -488,196 +523,244 @@
             }
         }
 
-        /* Animation for stats counter */
+        /* 数字增长动画 */
         .counter {
             transition: all 0.5s ease;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- 头部 -->
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-paw"></i>
+                <span>守护生命</span>
             </div>
             <nav>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#endangered">濒危动物</a></li>
+                    <li><a href="#actions">保护行动</a></li>
+                    <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- 英雄区域 -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>每一个生命都值得被守护</h1>
+            <p>加入我们，共同保护地球上的动物伙伴，维护生物多样性，为它们创造一个安全的家园。</p>
+            <a href="#actions" class="btn">立即行动</a>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- 关于我们 -->
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>关于动物保护</h2>
+                <p>动物是地球生态系统的重要组成部分，保护它们就是保护我们共同的家园。</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1527203561188-dae1bc1a417f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="志愿者照顾动物">
                 </div>
                 <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h3>我们的使命</h3>
+                    <p>随着人类活动的扩张，越来越多的动物正面临栖息地丧失、气候变化和非法捕猎的威胁。目前全球有超过40,000种物种被列为濒危或受威胁状态。</p>
+                    <p>我们致力于通过保护栖息地、打击非法野生动物贸易、推动动物保护立法和公众教育，为动物创造更安全的生存环境。</p>
+                    <p>保护动物不仅是为了维护生态平衡，更是人类对生命的尊重与责任。每一个物种的消失都是地球生物多样性不可挽回的损失。</p>
+                    <a href="#" class="btn">了解更多</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3 class="counter" data-target="41415">0</h3>
+                    <p>濒危物种数量</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <h3 class="counter" data-target="78">0</h3>
+                    <p>保护项目覆盖国家</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-users"></i>
+                    <h3 class="counter" data-target="35000">0</h3>
+                    <p>志愿者人数</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3 class="counter" data-target="230">0</h3>
+                    <p>成功救助案例</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- 濒危动物 -->
+    <section class="endangered" id="endangered">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>亟待保护的动物</h2>
+                <p>这些美丽的生命正面临生存危机，需要我们的关注与保护。</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+            <div class="endangered-grid">
+                <div class="animal-card">
+                    <div class="animal-img">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="大熊猫">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="animal-content">
+                        <h3>大熊猫</h3>
+                        <p>曾经濒危的大熊猫在保护努力下数量有所回升，但仍面临栖息地碎片化的威胁。目前野外种群数量约1800只。</p>
+                        <a href="#" class="btn">了解详情</a>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                <div class="animal-card">
+                    <div class="animal-img">
+                        <img src="https://images.unsplash.com/photo-1564349689-f69320c99da5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="非洲象">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="animal-content">
+                        <h3>非洲象</h3>
+                        <p>因非法盗猎象牙，非洲象数量在过去十年中下降了30%。目前仅存约415,000头，面临严重生存危机。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-img">
+                        <img src="https://images.unsplash.com/photo-1518644730709-0835103c5a67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="海龟">
+                    </div>
+                    <div class="animal-content">
+                        <h3>海龟</h3>
+                        <p>所有7种海龟均被列为濒危或易危物种，面临塑料污染、栖息地丧失和非法捕捞的多重威胁。</p>
+                        <a href="#" class="btn">了解详情</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <!-- 保护行动 -->
+    <section id="actions">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <div class="section-title">
+                <h2>我们可以做些什么</h2>
+                <p>保护动物需要每个人的参与，从小事做起，共同守护生命的多样性。</p>
+            </div>
+            <div class="conservation-steps">
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>拒绝野生动物制品</h3>
+                        <p>不购买象牙、皮草、海龟壳等野生动物制品，从消费端切断非法野生动物贸易的利益链。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>保护自然栖息地</h3>
+                        <p>支持和参与植树造林、清理河流等活动，减少对自然环境的破坏，为动物保留生存空间。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>学习与传播知识</h3>
+                        <p>了解动物保护知识，向身边的人宣传保护理念，提高公众对濒危物种的关注。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>参与志愿活动</h3>
+                        <p>加入动物保护组织的志愿活动，参与救助、放归和栖息地维护等实际保护工作。</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 呼吁行动 -->
+    <section class="cta">
+        <div class="container">
+            <h2>加入我们的保护行动</h2>
+            <p>每一个生命都有生存的权利，每一个行动都能带来改变。现在就加入我们，成为动物的守护者。</p>
+            <a href="#" class="btn">成为志愿者</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>守护生命</h3>
+                    <p>我们是一个致力于动物保护的非营利组织，通过教育、救助和倡导工作，为濒危动物创造更安全的未来。</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#endangered">濒危动物</a></li>
+                        <li><a href="#actions">保护行动</a></li>
+                        <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>保护项目</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">野生动物救助</a></li>
+                        <li><a href="#">栖息地恢复</a></li>
+                        <li><a href="#">反盗猎行动</a></li>
+                        <li><a href="#">公众教育计划</a></li>
+                        <li><a href="#">国际合作项目</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 北京市海淀区环保路100号</p>
+                    <p><i class="fas fa-phone"></i> 010-12345678</p>
+                    <p><i class="fas fa-envelope"></i> contact@animalprotect.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 守护生命 - 动物保护行动. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // 移动端菜单切换
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        // Counter Animation
+        // 数字增长动画
         function animateCounters() {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
+            const speed = 200; // 数值越小，动画越慢
             
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
@@ -694,10 +777,10 @@
             });
         }
 
-        // Initialize counters when page loads
+        // 页面加载完成后初始化计数器动画
         window.addEventListener('load', animateCounters);
 
-        // Smooth scrolling for navigation links
+        // 平滑滚动导航
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
